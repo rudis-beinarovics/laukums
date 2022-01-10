@@ -1,6 +1,6 @@
-let mala1
-let mala2
-let mala3
+//let mala1
+//let mala2
+//let mala3
 
 function nolasa() {
   const malas = document.getElementsByClassName("mala");
@@ -16,10 +16,21 @@ function nolasa() {
   }
 }
 function per(m1,m2,m3){
+    const m = nolasa();
+    m1=m.m1;m2=m.m2; m3=m.m3;  
+    console.log(m1,m2,m3);
   const p=m1+m2+m3;
+  console.log(p)
+  return p;
 }
 function lauk(m1,m2,m3) {
-  const s=per(m1,m2,m3);
-  var area = Math.sqrt(s*(s-m1)*s(s-m2)*(s-m3))
+  var s =per(m1,m2,m3);
+  const m = nolasa();
+  const p = per()
+  m1=m.m1;m2=m.m2; m3=m.m3;
+
+  var area = Math.sqrt(s*(s-m1)*(s-m2)*(s-m3))
+  console.log(area);
+  return area;
   
 }
