@@ -2,20 +2,32 @@
 <html lang="en">
   <head>
     <title>Laukuma kalkulātors</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="wrapper">
       <div class="content" role="main">
         <h1 class="title">Trījstūra kalkulātors</h1>
+        <p> </p>
+        <h2>Aprēķiniet trijstūra laukumu un perimetru</h2>
         <p1> Ievadiet trījstūra malas</p1>
-      
+        
         <input class="mala" type="text" id="mala1" value="0.00" />
         <input class="mala" type="text" id="mala2" value="0.00" />
         <input class="mala" type="text" id="mala3" value="0.00" />
        
       </div>
-      <button type="button" onclick="nolasa();per();lauk()">Aprēķināt</button>
+      <button type="button" onclick="nolasa();per();lauk();vaiir();druka()">Aprēķināt</button>
       <script src="script.js"></script>
+      <table>
+        <thead>
+            <tr>
+                <td>Perimetrs</td>
+                <td>Laukums</td>
+            </tr>
+        </thead>
+        <tbody class="rindas">
+    </table>
     </div>
   </body>
 </html>
