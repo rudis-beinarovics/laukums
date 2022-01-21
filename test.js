@@ -1,16 +1,10 @@
-
-var i = 10;
-
-if (i == 10) {
-
-if (i < 15)
-	document.write("i is smaller than 15");
-
-// Nested - if statement
-// Will only be executed if statement above
-// it is true
-if (i < 12)
-	document.write("i is smaller than 12 too");
+if (i == 10)
+  document.write("i is 10");
+else if (i == 15)
+  document.write("i is 15");
+else if (i == 20)
+  document.write("i is 20");
 else
-	document.write("i is greater than 15");
-}
+  document.write("i is not present");
+
+  

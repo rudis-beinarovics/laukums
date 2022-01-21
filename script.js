@@ -1,6 +1,5 @@
-//let mala1
-//let mala2
-//let mala3
+
+let v
 
 function nolasa() {
   const malas = document.getElementsByClassName("mala");
@@ -8,7 +7,6 @@ function nolasa() {
   const m2 = parseFloat(mala2.value);
   const m3 = parseFloat(mala3.value);
   if (m1 > 0 && m2 > 0 && m3 > 0) {
-    console.log({ m1, m2, m3 });
     return { m1, m2, m3 };
   } else {
     console.log(false);
@@ -22,8 +20,6 @@ function vaiir() {
   let mm = Math.max(m1, m2, m3);
   let p2 = m1 + m2 + m3;
   let pm = p2 - mm;
-  //console.log(pm);
-  //console.log(mm);
   if (mm < pm) {
     return { m1, m2, m3 };
   } else {
@@ -33,34 +29,25 @@ function vaiir() {
   }
 }
 function trijveids() {
-  const mm = vaiir();
   const m = nolasa();
+  v=""
   m1 = m.m1; m2 = m.m2; m3 = m.m3;
-  if (m1 = m2 || (m1 = m3) || (m2 = m3)) {
-    string = "Vienadsanu trijsturis";
-  }else{
-      if (m1 = m2 = m3) {
-    string = "Vienadmalu trijsturis";
-      
+  console.log({ m1, m2, m3 });
+  if (m1 == m2 && m2 == m3) {
+    v += "Vienadmalu trijsturis";
+  } else {
+    if (m1 == m2 || m1 == m3 || m2 == m3) {
+      v += "Vienadsanu trijsturis";
+    } else {
+      v += "Vienkars trijsturis";
+    }
   }
- else {
-    string = "Vienkars trijsturis";
-    
-  }
+    console.log(v);
+    return v;
+   
 }
 
 
- if(string="Vienadsanu trijsturis"){
- v= "Vienadsanu trijsturis"
- }else{
-   if(stringstring = "Vienadmalu trijsturis"){
-   }else {
-v="Vienkars trijsturis"
-
-}
-}
-console.log(v);
-}
 
 
 
@@ -68,9 +55,7 @@ console.log(v);
 function per(m1, m2, m3) {
   const m = nolasa();
   m1 = m.m1; m2 = m.m2; m3 = m.m3;
-  console.log(m1, m2, m3);
   const p = m1 + m2 + m3;
-  console.log(p)
   return p;
 }
 
@@ -81,8 +66,6 @@ function lauk(m1, m2, m3) {
   m1 = m.m1; m2 = m.m2; m3 = m.m3;
 
   var area = Math.sqrt(s * (s - m1) * (s - m2) * (s - m3))
-  //console.log()
-  console.log(area);
   return area;
 
 
@@ -91,7 +74,7 @@ function lauk(m1, m2, m3) {
 function druka() {
   const area = lauk()
   const p = per()
-  const v = trijveids()
+  const v=trijveids()
 
   let rindas = document.querySelector('.rindas');
   if (area > 0 && p > 0) {
@@ -106,7 +89,7 @@ function druka() {
     let rindas = document.querySelector('.rindas');
     let area = "";
     let p = "Trijsturis neeksiste"
-  }
+
     rindas.innerHTML += `
 <tr>
 <td>${v}</td>
@@ -114,7 +97,5 @@ function druka() {
     <td>${area}</td>
 </tr>`
   }
-
-
-
+}
 
